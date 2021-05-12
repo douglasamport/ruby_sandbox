@@ -39,10 +39,7 @@ end
 p counted_hash = count_files(file_arr)
 
 def output_tab_deliniated(hash, filename)
-  header = %w[Filetype Count Bytes].join("\t")
   File.open(filename, 'w') do |f|
-    f.puts header
-    puts header
     hash.each do |array|
       txt = array.flatten.join("\t")
       f.puts txt
